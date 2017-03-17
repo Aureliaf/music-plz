@@ -1,0 +1,117 @@
+html {
+    font-size: 100%;
+}
+
+body {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 17px;
+	color: #4d4d4d;
+	font-weight: 400;
+	line-height: 30px; 
+	background-color: #fff;
+	margin: 0;
+    background: url(img/bg-sage.jpg) no-repeat center 50px/cover;
+    
+}
+
+
+/* HEADER */
+
+header {
+    width: 1200px;
+    height: 96px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    margin: 0;
+}
+
+.logo a {
+    background: url(img/logo-noir.png) no-repeat;
+    display: block;
+    width: 73px;
+    height: 64px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+nav {
+    float: right;
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav__el {
+    float: left;
+    margin-left: 50px;
+}
+
+.nav__el a {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    height: 96px;
+    line-height: 96px;
+    opacity: 0.4;
+}
+
+.nav__el--actif a{
+    background: url(img/rond-selecteur.png) no-repeat 50% 65px;
+    opacity: 1;
+    outline: 0;
+} 
+
+.nav__el a:hover, .nav__el a:focus {
+    background: url(img/rond-blanc-selecteur.png) no-repeat 50% 65px;
+    opacity: 1;
+    outline: 0;
+} 
+
+
+/* ILLUSTRATION */
+
+.section--main {
+    height: 678px;
+    position: relative;
+}
+
+h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 40%;
+    margin: 0;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
