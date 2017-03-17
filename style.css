@@ -14,6 +14,17 @@ body {
     
 }
 
+.gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f59fca+0,f59fca+16,7db9e8+100&0.4+0,0+52,0+75 */
+    
+    background: -moz-linear-gradient(bottom,  rgba(245,159,202,0.4) 0%, rgba(245,159,202,0.28) 16%, rgba(194,170,215,0) 52%, rgba(161,177,223,0) 75%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    
+    background: -webkit-linear-gradient(bottom,  rgba(245,159,202,0.4) 0%,rgba(245,159,202,0.28) 16%,rgba(194,170,215,0) 52%,rgba(161,177,223,0) 75%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    
+    background: linear-gradient(to top,  rgba(245,159,202,0.4) 0%,rgba(245,159,202,0.28) 16%,rgba(194,170,215,0) 52%,rgba(161,177,223,0) 75%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#66f59fca',GradientType=0 ); /* IE6-9 */
+
+}
 
 /* HEADER */
 
@@ -39,6 +50,14 @@ header {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.logo a:hover {
+    background: url(img/logo-noir_hover.png) no-repeat;
+    display: block;
+    width: 73px;
+    height: 73px;
+    top: 25px;
 }
 
 nav {
@@ -89,7 +108,7 @@ nav {
     position: relative;
 }
 
-h2 {
+h2 a{
     font-family: 'Libre Franklin', sans-serif;
     font-size: 72px;
     font-weight: 800;
@@ -100,16 +119,38 @@ h2 {
     left: 50%;
     top: 40%;
     margin: 0;
-
-
 }
 
 
+/* INDICES SLIDERS */
 
+.indices {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 56.5px);
+}
 
+.slide__el {
+    background: url(img/indice-slide-actif.png) no-repeat;
+    width: 8px;
+    height: 8px;
+    float: left;
+    margin-right: 7px;
+}
 
+.slide__el:last-child {
+    margin-right: 0;
+}
 
+.slide__el--actif {
+    background: url(img/indice-slide.png) no-repeat;
+}
 
+.slide-before {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 56.5px);
+}
 
 
 
