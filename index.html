@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="gradient">
+<html>
     
     <head>
         <meta charset="utf-8">
@@ -7,10 +7,12 @@
         <title>Label GUM | Music pleaze by Aurélia Fabre</title>
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin:400,600,800" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        
+
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
     </head>
     
-    <body class="">
+    <body>
         
         <header>
             
@@ -19,7 +21,18 @@
             <nav>
                 <ul class="nav">
                     <li class="nav__el nav__el--actif"><a href="index.html">Home</a></li>
-                    <li class="nav__el"><a href="#">Artists</a></li>
+                    <li class="nav__el dropdown"><div id="artists"><a href="#">Artists</a></div>
+                        <div id="dropdown" class="dropdown-content">
+                            <a href="#">Woodkid</a>
+                            <a href="#">The Shoes</a>
+                            <a href="#">Rocky</a>
+                            <a href="#">Part company</a>
+                            <a href="#">Sage</a>
+                            <a href="#">Black Atlass</a>
+                            <a href="#">Herman Dune</a>
+                            <a href="#">Esser</a>
+                        </div>
+                    </li>
                     <li class="nav__el"><a href="#">About</a></li>
                 </ul>
             </nav>
@@ -29,25 +42,53 @@
         
         <main class="section--main">
             
-            <h2><a href="#">Sage</a></h2>
+            <section class="slider">
+            
+                <div id="slideshow"> 
+                <div id="s1">
+                    <div id="s2">
+                        <div id="s3">
+                            <a class="next next1 slide-after" href="#s2"><img src="img/fleche-after.png"/></a> <!-- Pour la 1ère étape -->
+                            <a class="prev prev2 slide-before" href="#s1"><img src="img/fleche-before.png"/></a> - <a class="next next2 slide-after" href="#s3"><img src="img/fleche-after.png"/></a> <!-- Pour la 2ème étape -->
+                            <a class="prev prev3 slide-before" href="#s2"><img src="img/fleche-before.png"/></a> <!-- Pour la 3ème étape -->
+                            <ul id="sContent"> 
+                                
+                                <li><div class="sage"><h2><a href="#">Sage</a></h2></div></li>
+                                
+                                <li><div class="rocky"><h2><a href="#">Rocky</a></h2></div></li>
+                                
+                                <li><div class="woodkid"><h2><a href="#">Woodkid</a></h2></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            </section>
+            
+
             
         </main>    
-        
-        <img class="slide-before" src="img/fleche-before.png"/>
-        <img class="slide-after" src="img/fleche-after.png"/>
-            
+       
         <div class="indices">
                 <div class="slide__el"></div>
                 <div class="slide__el slide__el--actif"></div>
                 <div class="slide__el"></div>
-                <div class="slide__el"></div>
-                <div class="slide__el"></div>
-                <div class="slide__el"></div>
-                <div class="slide__el"></div>
-                <div class="slide__el"></div>
         </div>
+
         
+         <script>
         
+            var dropdown = document.querySelector(".dropdown-content");
+            dropdown.addEventListener("mouseover", function() {
+                document.getElementById("artists").classList.add("nav__el--artists");
+            });
+             
+            dropdown.addEventListener("mouseout", function() {
+                document.getElementById("artists").classList.remove("nav__el--artists");
+            });
+             
+        </script>
     
     </body>
     

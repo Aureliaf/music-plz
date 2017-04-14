@@ -10,29 +10,20 @@ body {
 	line-height: 30px; 
 	background-color: #fff;
 	margin: 0;
-    background: url(img/bg-sage.jpg) no-repeat center 50px/cover;
-    
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.gradient {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f59fca+0,f59fca+16,7db9e8+100&0.4+0,0+52,0+75 */
-    
-    background: -moz-linear-gradient(bottom,  rgba(245,159,202,0.4) 0%, rgba(245,159,202,0.28) 16%, rgba(194,170,215,0) 52%, rgba(161,177,223,0) 75%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
-    
-    background: -webkit-linear-gradient(bottom,  rgba(245,159,202,0.4) 0%,rgba(245,159,202,0.28) 16%,rgba(194,170,215,0) 52%,rgba(161,177,223,0) 75%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    
-    background: linear-gradient(to top,  rgba(245,159,202,0.4) 0%,rgba(245,159,202,0.28) 16%,rgba(194,170,215,0) 52%,rgba(161,177,223,0) 75%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#66f59fca',GradientType=0 ); /* IE6-9 */
-
-}
 
 /* HEADER */
 
 header {
     width: 1200px;
-    height: 96px;
+    height: 10.8229987vh;
     margin: 0 auto;
     position: relative;
+    z-index: 150;
 }
 
 .logo {
@@ -100,26 +91,187 @@ nav {
     outline: 0;
 } 
 
+.nav__el--artists a{
+    background: url(img/rond-blanc-selecteur.png) no-repeat 50% 65px;
+    opacity: 1;
+    outline: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 35px;
+    min-width: 160px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    z-index: 4;
+    padding: 20px 30px;
+}
+
+.dropdown-content a {
+    text-transform: inherit;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 
 /* ILLUSTRATION */
 
 .section--main {
-    height: 678px;
+    height: 89.17700113vh;
     position: relative;
+    z-index: 1;
 }
 
-h2 a{
+h2 {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 48%;
+    margin: 0;
+}
+
+
+h2 a {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 72px;
     font-weight: 800;
     color: #000;
     text-decoration: none;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 40%;
-    margin: 0;
 }
+    
+
+.slider {
+    position: absolute;
+    top: -10.8229987vh;
+    left: 0;
+}
+
+#slideshow {
+                position: relative;    /*le parent positionné*/
+                width: 100vw;          /*limite en largeur (1 élément du slideshow)*/
+                height: 100vh;         /*limite en hauteur*/
+                margin: 0;
+                overflow: hidden;      /*on cache ce qui déborde*/
+                z-index: 1;
+                }
+            
+            #sContent {
+                position: absolute;   /*on sort l'élément du flux*/
+                top: 0;               /*on le positionne précisément dans ...*/
+                left: 0;              /*l'angle haut gauche de son parent positionné*/
+                width: 500%;         /*ou 300% car 3 éléments*/
+                margin: 0;            
+                padding: 0;
+                z-index: 10;
+
+                /*CSS3 transition*/
+                -webkit-transition: all 1s;
+                -moz-transition: all 1s;
+                -o-transition: all 1s;
+                transition: all 1s;
+            }
+            #sContent li {
+                display: inline-block;      /*on aligne les éléments du slideshow*/
+                margin: 0;
+            }
+
+            #slideshow .next, #slideshow .prev {
+                z-index: 20;
+            }
+
+
+            /* initialisation */
+            #slideshow .next, #slideshow .prev { display: none; }
+            #slideshow .next1 { display: block; }
+
+            /* Vers 1ère étape */
+            #s1:target #sContent { left: 0px; }
+            #s1:target .next, #s1:target .prev { display: none; }
+            #s1:target .next1 { display: block; }
+
+            /* Vers 2ème étape */
+            #s2:target #sContent { left: -100vw; } /*ou -100%*/
+            #s2:target .next, #s2:target .prev { display: none; }
+            #s2:target .next2, #s2:target .prev2 { display: block; }
+
+            /* Vers 3ème étape */
+            #s3:target #sContent { left: -200vw; } /*ou -200%*/
+            #s3:target .next, #s3:target .prev { display: none; }
+            #s3:target .prev3 { display: block; }
+
+            .sage {
+                position: relative;
+                height: 100vh;
+                width: 100vw;
+                display: inline-block;
+                background: url(img/bg-sage2.jpg) no-repeat center 0px/cover;
+            }
+            
+            .rocky {
+                position: relative;
+                height: 100vh;
+                width: 100vw;
+                display: inline-block;
+                background: url(img/bg-rocky.jpg) no-repeat center 0px/cover;
+                
+            }
+            
+            .woodkid {
+                position: relative;
+                height: 100vh;
+                width: 100vw;
+                display: inline-block;
+                background: url(img/bg-sage2.jpg) no-repeat center 0px/cover;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* INDICES SLIDERS */
@@ -127,7 +279,8 @@ h2 a{
 .indices {
     position: absolute;
     bottom: 50px;
-    left: calc(50% - 56.5px);
+    left: calc(50% - 16.5px);
+    z-index: 150;
 }
 
 .slide__el {
@@ -136,6 +289,7 @@ h2 a{
     height: 8px;
     float: left;
     margin-right: 7px;
+
 }
 
 .slide__el:last-child {
@@ -148,10 +302,15 @@ h2 a{
 
 .slide-before {
     position: absolute;
-    top: 50%;
-    left: calc(50% - 56.5px);
+    top: 47%;
+    left: 5%;
 }
 
+.slide-after {
+    position: absolute;
+    top: 47%;
+    right: 5%;
+}
 
 
 
